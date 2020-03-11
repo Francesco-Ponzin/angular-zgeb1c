@@ -1,7 +1,26 @@
 <hello name="{{ name }}"></hello>
 
 
+<div *ngFor = "let row of rows">
+   <select [(ngModel)]="row.sign">
+     <option value= 1>+</option>
+     <option value= -1>-</option>
+     </select> 
+     <input type="number" [(ngModel)]="row.value">
+
+     <button (click)="toggle(row)">disable</button>
+
+<button (click)="rimuovi(row)">rimuovi</button>
 
 
+</div>
+
+<button (click)="aggiungi()">aggiungi</button>
 
 <p>result: {{result}}</p>
+
+{{row[0].value}}
+
+
+
+
