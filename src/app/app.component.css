@@ -1,3 +1,21 @@
 p {
   font-family: Lato;
 }
+.red >*{
+  color: red;
+}
+
+#myContainer > *{
+  margin: 5px;
+}
+
+#myRow > *{
+  margin: 0 3px 0 0;
+}
+
+#myContainer{
+  background: antiquewhite;
+  border-radius: 5px;
+  padding: 5px;
+  width: max-content;
+}

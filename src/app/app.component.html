@@ -1,23 +1,24 @@
-<hello name="{{ name }}"></hello>
 
-
-<div *ngFor = "let row of rows">
-   <select [(ngModel)]="row.sign">
+<div id="myContainer">
+<div id="myRow" *ngFor = "let row of rows" [ngClass]="row.disabled == 0? 'ng-disabled' : ''">
+   <select [(ngModel)]="row.sign" [attr.disabled]="row.disabled == 0 ? '' : null">
      <option value= 1>+</option>
      <option value= -1>-</option>
      </select> 
-     <input type="number" [(ngModel)]="row.value">
+     <input type="number" [(ngModel)]="row.value" [attr.disabled]="row.disabled == 0 ? '' : null">
 
-     <button (click)="toggle(row)">disable</button>
+     <button (click)="toggle(row)" >disable</button>
 
 <button (click)="rimuovi(row)">rimuovi</button>
 
 
 </div>
 
-<button (click)="aggiungi()">aggiungi</button>
 
-<p>result: {{result}}</p>
+
+<button (click)="aggiungi()">aggiungi</button>
+</div>
+<p>Result: <mark> {{result}}  </mark></p>
 
 {{row[0].value}}
 

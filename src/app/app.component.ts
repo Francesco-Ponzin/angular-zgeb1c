@@ -36,9 +36,9 @@ export class AppComponent {
   };
 
   toggle = function(item){
-    if (item.disabled == 0) {
+      if (item.disabled == 0) {
       item.disabled = 1;
-    }else{
+      }else{
       item.disabled = 0;
     }
   }
